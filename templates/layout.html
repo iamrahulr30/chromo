@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Input Image Folder</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.image_folder.label }} {{ form.image_folder() }}
+        {{ form.submit() }}
+    </form>
+    <div>
+        {% if processing %}
+            <p>Processing...</p>
+        {% endif %}
+    </div>
+</body>
+</html>
